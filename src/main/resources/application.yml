@@ -8,20 +8,34 @@ spring:
     datasource:
       names:
         master,slave
-      # 主数据源
+      # 主库（增删改操作）
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:13306/reggie?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+        url: jdbc:mysql://192.168.222.128:3306/reggie?characterEncoding=utf-8
         username: root
         password: root
-      # 从数据源
+      # 从数据源（读操作）
       slave:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:13306/reggie?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+        url: jdbc:mysql://192.168.222.129:3306/reggie?characterEncoding=utf-8
         username: root
         password: root
+#      # 主数据源
+#      master:
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://localhost:13306/reggie?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+#        username: root
+#        password: root
+#      # 从数据源
+#      slave:
+#        type: com.alibaba.druid.pool.DruidDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://localhost:13306/reggie?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+#        username: root
+#        password: root
     masterslave:
       # 读写分离配置
       load-balance-algorithm-type: round_robin #轮询
@@ -35,7 +49,7 @@ spring:
       sql:
         show: true #开启SQL显示，默认false
   main:
-    allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true #允许bean定义覆盖
   redis:
     host: localhost
     port: 6379
