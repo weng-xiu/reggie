@@ -39,6 +39,7 @@ import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKN
 
 @Slf4j
 @Configuration
+//开启Swagger文档功能
 @EnableSwagger2
 @EnableKnife4j
 public class WebMvcConfig extends WebMvcConfigurationSupport {
