@@ -12,14 +12,14 @@ spring:
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.222.128:3306/reggie?characterEncoding=utf-8
+        url: jdbc:mysql://127.0.0.1:13306/reggie?characterEncoding=utf-8
         username: root
         password: root
       # 从数据源（读操作）
       slave:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://192.168.222.129:3306/reggie?characterEncoding=utf-8
+        url: jdbc:mysql://127.0.0.1:13306/reggie?characterEncoding=utf-8
         username: root
         password: root
 #      # 主数据源
@@ -53,7 +53,7 @@ spring:
   redis:
     host: localhost
     port: 6379
-    password: 123456
+    password:
     database: 0
   cache:
     redis:

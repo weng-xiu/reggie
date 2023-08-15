@@ -37,6 +37,10 @@ import java.util.List;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
 
+
+/**
+ * SpringMVC配置类
+ */
 @Slf4j
 @Configuration
 //开启Swagger文档功能
