@@ -6,6 +6,9 @@ import com.itheima.reggie.entity.Setmeal;
 
 import java.util.List;
 
+/**
+ * 套餐Service接口
+ */
 public interface SetmealService extends IService<Setmeal> {
     /**
      * 新增套餐，同时需要保存套餐和菜品的关联关系

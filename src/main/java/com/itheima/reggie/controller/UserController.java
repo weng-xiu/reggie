@@ -19,6 +19,9 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 移动端用户登录
+ */
 @RestController
 @RequestMapping("/user")
 @Slf4j

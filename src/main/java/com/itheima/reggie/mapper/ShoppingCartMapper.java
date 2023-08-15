@@ -7,6 +7,9 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * 购物车Mapper接口
+ */
 @Mapper
 public interface ShoppingCartMapper extends BaseMapper<ShoppingCart> {
 
