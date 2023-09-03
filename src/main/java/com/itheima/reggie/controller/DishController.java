@@ -234,6 +234,7 @@ public class DishController {
         }
         return R.success("修改成功");
     }
+
     //删除菜品
     @DeleteMapping
     public R<String> delete(String[] ids){

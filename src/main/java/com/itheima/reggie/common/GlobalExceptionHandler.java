@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
      * 异常处理方法
      * @return
      */
-    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+    @ExceptionHandler(SQLIntegrityConstraintViolationException.class) // 用于处理特定处理程序类和/或处理程序方法中的异常的注释。
     public R<String> exceptionHandler(SQLIntegrityConstraintViolationException ex){
         log.error(ex.getMessage());
 
